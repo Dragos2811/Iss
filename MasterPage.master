@@ -1,0 +1,177 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </title>
+    <link rel="stylesheet" href="Style/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="Style/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="Style/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="Style/css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="Style/css/nouislider.min.css">
+	<link rel="stylesheet" href="Style/css/ionicons.min.css">
+	<link rel="stylesheet" href="Style/css/plyr.css">
+	<link rel="stylesheet" href="Style/css/photoswipe.css">
+	<link rel="stylesheet" href="Style/css/default-skin.css">
+	<link rel="stylesheet" href="Style/css/main.css">
+    <script src="Style/js/jquery-3.3.1.min.js"></script>
+    <script src="Style/js/bootstrap.bundle.min.js"></script>
+    <script src="Style/js/owl.carousel.min.js"></script>
+    <script src="Style/js/jquery.mousewheel.min.js"></script>
+    <script src="Style/js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="Style/js/wNumb.js"></script>
+    <script src="Style/js/nouislider.min.js"></script>
+    <script src="Style/js/plyr.min.js"></script>
+    <script src="Style/js/jquery.morelines.min.js"></script>
+    <script src="Style/js/photoswipe.min.js"></script>
+    <script src="Style/js/photoswipe-ui-default.min.js"></script>
+    <script src="Style/js/main.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+            
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header class="header">
+		<div class="header__wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="header__content">
+							<!-- header logo -->
+							<asp:HyperLink class="header__logo" runat ="server" NavigateUrl="~/Default.aspx">
+								<img src="Style/img/logo.svg" alt="">
+							</asp:HyperLink>
+							<!-- end header logo -->
+
+							<!-- header nav -->
+							<ul class="header__nav">
+								<!-- dropdown -->
+								<!-- end dropdown -->
+
+								<li class="header__nav-item">
+									<a href="movie.aspx" class="header__nav-link">Movie</a>
+								</li>
+                                <li class="header__nav-item">
+									<a href="admin.aspx" class="header__nav-link">Admin</a>
+								</li>
+							</ul>
+							<!-- end header nav -->
+
+							<!-- header auth -->
+							<div class="header__auth">
+								<button class="header__search-btn" type="button">
+									<i class="icon ion-ios-search"></i>
+								</button>
+                                <asp:HyperLink ID="hello" class="header__sign-in" runat="server" visible="false"><span>hello,</span></asp:HyperLink>
+                                <asp:HyperLink ID="loginBtn" class="header__sign-in" runat="server" NavigateUrl="~/login.aspx"><span>sign in</span></asp:HyperLink>
+							</div>
+							<!-- end header auth -->
+
+							<!-- header menu btn -->
+							<button class="header__btn" type="button">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+							<!-- end header menu btn -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- header search -->
+		<div class="header__search">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="header__search-content">
+							<input type="text" placeholder="Search for a movie, TV Series that you are looking for">
+
+							<button type="button">search</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end header search -->
+	</header>
+    <div class ="content">
+    <asp:ContentPlaceHolder id="contentBody" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    </div>
+    
+    <footer class="footer">
+		<div class="container">
+			<div class="row">
+				<!-- footer list -->
+				<div class="col-12 col-md-3">
+					<h6 class="footer__title">Download Our App</h6>
+					<ul class="footer__app">
+						<li><a href="#"><img src="img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
+						<li><a href="#"><img src="img/google-play-badge.png" alt=""></a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-6 col-sm-4 col-md-3">
+					<h6 class="footer__title">Resources</h6>
+					<ul class="footer__list">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Pricing Plan</a></li>
+						<li><a href="#">Help</a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-6 col-sm-4 col-md-3">
+					<h6 class="footer__title">Legal</h6>
+					<ul class="footer__list">
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Security</a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-12 col-sm-4 col-md-3">
+					<h6 class="footer__title">Contact</h6>
+					<ul class="footer__list">
+						<li><a href="tel:+18002345678">+1 (800) 234-5678</a></li>
+						<li><a href="mailto:support@moviego.com">support@flixgo.com</a></li>
+					</ul>
+					<ul class="footer__social">
+						<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+						<li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+						<li class="twitter"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+						<li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer copyright -->
+				<div class="col-12">
+					<div class="footer__copyright">
+						<small><a href="https://templatespoint.net" target="_blank">TemplatesPoint</a></small>
+
+						<ul>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- end footer copyright -->
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
